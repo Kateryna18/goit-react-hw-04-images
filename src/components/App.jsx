@@ -29,7 +29,6 @@ export function App() {
       try {
         setIsLoading(true);
         const data = await fetchImages(query, page);
-        console.log(data);
         setImages(prevImages => [...prevImages, ...data]);
       } catch (error) {
         setError(error);

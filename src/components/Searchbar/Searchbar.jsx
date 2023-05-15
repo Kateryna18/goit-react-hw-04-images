@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './Searchbar.module.css';
-// import { TbPhotoSearch } from 'react-icons/tb';
+import PropTypes from 'prop-types';
+import { TbPhotoSearch } from 'react-icons/tb';
 
 
 export function Searchbar({ onSubmit }) {
@@ -8,7 +9,7 @@ export function Searchbar({ onSubmit }) {
     <header className={css.searchbar}>
       <form className={css.form} onSubmit={onSubmit}>
         <button type="submit" className={css.button}>
-          {/* <TbPhotoSearch className={css.buttonIcon}/> */}
+          <TbPhotoSearch className={css.buttonIcon}/>
           {/* <span className={css.buttonLabel}>Search</span> */}
         </button>
 
@@ -23,4 +24,8 @@ export function Searchbar({ onSubmit }) {
       </form>
     </header>
   );
+}
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func,
 }
