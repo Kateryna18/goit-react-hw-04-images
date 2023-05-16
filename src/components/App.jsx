@@ -17,12 +17,10 @@ export function App() {
   const [page, setPage] = useState(1);
   const [showModal, setShowModal] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
-  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
-    if (isFirstRender) {
-      setIsFirstRender(false);
-      return;
+    if(query === ''){
+      return
     }
 
     const fetchData = async () => {
@@ -38,7 +36,7 @@ export function App() {
     };
 
     fetchData();
-  }, [query, page, isFirstRender]);
+  }, [query, page]);
 
   const onSubmit = e => {
     e.preventDefault();

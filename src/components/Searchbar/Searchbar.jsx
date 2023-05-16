@@ -10,7 +10,6 @@ export function Searchbar({ onSubmit }) {
       <form className={css.form} onSubmit={onSubmit}>
         <button type="submit" className={css.button}>
           <TbPhotoSearch className={css.buttonIcon}/>
-          {/* <span className={css.buttonLabel}>Search</span> */}
         </button>
 
         <input
